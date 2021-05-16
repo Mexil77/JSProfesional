@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    <link rel="stylesheet" href="./assets/index.css" />
+    <link rel="stylesheet" href="../assets/index.css" />
   </head>
   <body>
     <header class="header">
@@ -14,7 +14,7 @@
           <li class="header-nav-ul__li">
             <img
               class="header-nav-ul-li__img"
-              src="./assets/MEXIL.png"
+              src="../assets/MEXIL.png"
               alt="logo"
             />
           </li>
@@ -23,27 +23,21 @@
     </header>
     <section class="section">
       <video class="section__video">
-        <source src="./assets/nintendo_direct_17_02_2021.mp4" />
+        <source src="../assets/nintendo_direct_17_02_2021.mp4" />
       </video>
       <div class="section__div">
-        <button class="section-div__play-button">Play</button>
+        <button id="play" class="section-div__button">
+          <i class="fas fa-play"></i>
+        </button>
+        <button id="mute" class="section-div__button">
+          <i class="fas fa-volume-mute"></i>
+        </button>
       </div>
     </section>
-    <script>
-      const video = document.querySelector("video");
-      const button = document.querySelector("button");
-
-      function MediaPlayer(config) {
-        this.media = config.el;
-      }
-
-      MediaPlayer.prototype.play = function () {
-        this.media.play();
-      };
-
-      const player = new MediaPlayer({ el: video });
-
-      button.onclick = () => player.play();
-    </script>
+    <script
+      src="https://use.fontawesome.com/releases/v5.15.3/js/all.js"
+      data-auto-replace-svg="nest"
+    ></script>
+    <script type="module" src="../assets/index.js"></script>
   </body>
 </html>

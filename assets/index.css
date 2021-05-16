@@ -27,21 +27,25 @@ ul {
 .section {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   height: 550px;
 }
 .section__video {
-  width: 75%;
+  width: 60%;
+  margin-top: 30px;
 }
 
 .section__div {
-  width: 75%;
+  display: flex;
+  width: 60%;
 }
 
-.section-div__play-button {
-  width: 100px;
-  height: 25px;
+.section-div__button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
   border-radius: 20px;
   background-color: #30047c;
   color: aliceblue;
