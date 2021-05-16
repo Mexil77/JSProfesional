@@ -22,15 +22,28 @@
       </nav>
     </header>
     <section class="section">
-      <video
-        id="PrincipalVideo"
-        class="section__video"
-        src="./assets/nintendo_direct_17_02_2021.mp4"
-      ></video>
+      <video class="section__video">
+        <source src="./assets/nintendo_direct_17_02_2021.mp4" />
+      </video>
       <div class="section__div">
         <button class="section-div__play-button">Play</button>
       </div>
     </section>
-    <script></script>
+    <script>
+      const video = document.querySelector("video");
+      const button = document.querySelector("button");
+
+      function MediaPlayer(config) {
+        this.media = config.el;
+      }
+
+      MediaPlayer.prototype.play = function () {
+        this.media.play();
+      };
+
+      const player = new MediaPlayer({ el: video });
+
+      button.onclick = () => player.play();
+    </script>
   </body>
 </html>
